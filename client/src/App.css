@@ -1,0 +1,122 @@
+/* App.css */
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Soft gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: auto; /* Auto height for rows */
+  gap: 20px; /* Space between elements */
+  padding: 20px;
+}
+
+.content-container {
+  background: white;
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  padding: 40px;
+  width: 100%;
+  max-width: 450px; /* Responsive max width */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add a hover effect */
+}
+
+.content-container:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Larger heading */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.connect-section {
+  margin-bottom: 20px;
+}
+
+.connect-button,
+.transfer-button {
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Vibrant gradient button */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.connect-button:hover,
+.transfer-button:hover {
+  background: linear-gradient(90deg, #5a0e9e, #1e5bbf); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.wallet-info {
+  margin-top: 20px;
+  font-size: 1.2rem; /* Slightly larger font for wallet info */
+  color: #555; /* Softer color for wallet info */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.input-field {
+  padding: 12px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.input-field:focus {
+  border-color: #6a11cb; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.5); /* Add shadow on focus */
+  outline: none; /* Remove default outline */
+}
+
+.error-message {
+  color: #d32f2f; /* Darker red for error messages */
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .content-container {
+    width: 90%; /* Make it responsive on smaller screens */
+  }
+
+  h1 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .input-field {
+    font-size: 14px; /* Adjust input field size for smaller screens */
+  }
+
+  .connect-button,
+  .transfer-button {
+    font-size: 16px; /* Adjust button size for smaller screens */
+  }
+}
